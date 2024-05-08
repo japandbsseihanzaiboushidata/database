@@ -1,6 +1,5 @@
 requests
 BeautifulSoup
-re
 pandas 
 csv
 datetime
