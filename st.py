@@ -7,6 +7,10 @@ import datetime
 import streamlit as st
 import pandas as pd
 import spacy
+subprocess.run([f"{sys.executable}", "-m","spacy","download","ja_core_news_md"])
+
+   
+
 
 st.title("Japan_DBS_Seihanzai_Boushi_Dataset")
 # CSVファイルを読み込む
