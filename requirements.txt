@@ -1,1 +1,9 @@
-
+requests
+BeautifulSoup
+re
+pandas 
+csv
+datetime
+streamlit
+pandas 
+spacy
