@@ -26,8 +26,7 @@ conn = sqlite3.connect(db_file_path)
 # データベースからデータを読み込み# データフレームを表示
 df = pd.read_sql(f"SELECT * FROM news_table", conn)
 st.write(df)
-# データベースとの接続を閉じる
-conn.close()
+
 
 # 検索窓を追加
 search_term = st.text_input("事件情報から検索")
@@ -36,7 +35,8 @@ if search_term:
     search_query = f"SELECT * FROM news_table WHERE Content LIKE ?"
     df = pd.read_sql_query(search_query, conn, params=('%'+search_term+'%',))
     st.write(df)
-
+# データベースとの接続を閉じる
+conn.close()
 
 st.title("☆投稿方法")
 # テキスト入力ウィジェットを使用して文字列を受け取る
